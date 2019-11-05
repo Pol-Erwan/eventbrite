@@ -1,9 +1,17 @@
 <a class="text-center">
   <h1>Event show</h1>
 </a>
-
-	  <h3><br><%=@event.title%></br></h3>
+  <h4>Heure de début :</h4>
+<%=@event.start_date%>
+  <h4>Durée :</h4>
+<%=@event.duration%>min<br>
+<br><h5><%=@event.title%></h5>
 	  <br><%=@event.description%></br>
-	  <br><%=@event.administrator%></br>
+<br>
+<%=@event.price%>$
+</br>
+<br>
+<%=@event.location%>
+</br>
 
       <br><a href="<%= events_path %>">Retour</a></br>

@@ -3,16 +3,16 @@
     <h1>accueil EventBrite</h1>
   </a>
 
-  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around; padding-top: 100px">
+  <div class="container" style="display: justify-content: space-around; padding-top: 50px">
     <br><%@event.each do |index|%></br>
-      <div class="card text-white bg-secondary mb-3" style="width: 20rem;">
-        <div class="card-header">
+      <div class="card text-white bg-info m-4" style="width: 40rem;">
+        <div class="card-header mx-2">
 	  <h3><br><%=index.title%></br></h3>
 	  <br><%=index.description%></br>
 	  <br><%=index.administrator%></br>
-	  <br><%=link_to "more details", event_path(index) %>
+	  <div class="text-white"><br><%=link_to "more details", event_path(index) %></div>
 	</div>
-      <div class="card-body">
+      </div>
   </div>
   <%end%>
 </body>
