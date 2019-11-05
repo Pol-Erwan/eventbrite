@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  # get 'static_pages/index'
+
   root 'events#index'
 
   resources :events
-  resources :users, only: [:show, :index]
-
-  get 'static_pages/secret'
+  resources :users, only: [:index]  
+  
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
