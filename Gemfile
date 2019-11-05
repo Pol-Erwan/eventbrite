@@ -5,6 +5,8 @@ ruby '2.5.1'
 gem 'devise'
 gem 'letter_opener'
 gem 'dotenv-rails'
+gem 'table_print'
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
