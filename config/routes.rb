@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'events#index'
 
   resources :events
+  resources :users, only: [:show, :index]
 
   get 'static_pages/secret'
   devise_for :users
