@@ -1,16 +1,18 @@
-<a class="text-center">
-  <h1>accueil EventBrite</h1>
-</a>
+<body>
+  <a class="text-center">
+    <h1>accueil EventBrite</h1>
+  </a>
 
-<div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around; padding-top: 100px">
-<br><%@event.each do |index|%></br>
-        <div class="card text-white bg-secondary mb-3" style="width: 20rem;">
-  <div class="card-header">
-<br><%=index.title%></br>
-<br><%=index.description%></br>
-<br><%=index.administrator%></br>
-</div>
-<div class="card-body">
-</div>
-<%end%>
-
+  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around; padding-top: 100px">
+    <br><%@event.each do |index|%></br>
+      <div class="card text-white bg-secondary mb-3" style="width: 20rem;">
+        <div class="card-header">
+	  <h3><br><%=index.title%></br></h3>
+	  <br><%=index.description%></br>
+	  <br><%=index.administrator%></br>
+	  <br><%=link_to "more details", event_path(index) %>
+	</div>
+      <div class="card-body">
+  </div>
+  <%end%>
+</body>
