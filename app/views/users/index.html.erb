@@ -2,7 +2,11 @@
   <a class="text-center">
     <h1>Page Profil index</h1>
   </a>
+    <div><h5 class="text-center"><%= current_user.first_name %> <%= current_user.last_name %></h5>
+	  <a class="text-center"><h5>description :</h5><%=current_user.description%></a>
+	  <a class="text-center"><h5>mail : </h5></a>
+	  <a class="text-center"><%=current_user.email%></a>
+    </div>
 
       <br><a href="<%= events_path %>">Retour</a></br>
-
 </body>
