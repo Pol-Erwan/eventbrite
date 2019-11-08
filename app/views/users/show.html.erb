@@ -2,6 +2,23 @@
   <a class="text-center">
     <h1>Page Profil show</h1>
   </a>
-
+    <div><h5 class="text-center"><%= current_user.first_name %> <%= current_user.last_name %></h5>
+	  <a class="text-center"><h5>description :</h5><%=current_user.description%></a>
+	  <a class="text-center"><h5>mail : </h5></a>
+	  <a class="text-center"><%=current_user.email%></a>
+    </div>
+-----------------------------------------
+<h3>Avatar actuel</h3>
+<%if @user.avatar.attached?%>
+  <%= image_tag @user.avatar, alt: 'avatar' %>
+<%else%>
+  <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+<%end%>
+<h3>Changer d'avatar ?</h3>
+<%= form_tag user_avatars_path(@user), multipart: true do %>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>
+      <br><a href="<%= events_path %>">Retour</a></br>
 
 </body>
